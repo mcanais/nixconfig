@@ -1,0 +1,35 @@
+@define-color color_bg rgba(25, 25, 25, 0.7);
+
+window {
+	font-size: 15px;
+	font-family: "Cousine Nerd Font";
+	background-color: @color_bg;
+	color: white;
+	border: 1px solid;
+	border-radius: 10px;
+}
+
+
+#entry:selected {
+	background-color: white;
+	border-radius: 7px;
+}
+
+#text {
+	margin: 5px 10px;
+}
+
+#text:selected {
+	color: black;
+}
+
+#input {
+	margin: 10px;
+	background-color: rgba(50,50,50,0.4);
+	border: none;
+	color: white;
+}
+
+#inner-box {
+	margin: 0px 10px;
+}

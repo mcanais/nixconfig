@@ -1,0 +1,102 @@
+@define-color color_bg rgba(25, 25, 25, 0.5);
+@define-color color_fg white;
+@define-color color_fg_inactive rgba(255, 255, 255, 0.25);
+
+@define-color color_critical rgba(255, 66, 66,1);
+
+@define-color color_tooltip rgba(0, 0, 0, 0.7);
+@define-color color_border rgba(255, 255, 255, 0.2);
+@define-color color_hover rgba(200, 200, 200, 0.3);
+
+@define-color color_bg_active rgba(230, 230, 230, 0.2);
+
+
+* {
+	text-shadow: none;
+	box-shadow: none;
+	border: none;
+	border-radius: 0;
+	font-family: "Cousine Nerd Font";
+	font-size: 13.5px;
+}
+
+
+window#waybar {
+	background: @color_bg;
+	border-bottom: 1px solid @color_border;
+	color: @color_fg;
+}
+
+tooltip {
+	background: @color_tooltip;
+	border-radius: 5px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: @color_border;
+}
+
+#custom-os_button {
+	font-size: 18px;
+	margin: 0 3px;
+	padding-left: 10px;
+	padding-right: 18px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#workspaces {
+	color: transparent;
+	margin-right: 1.5px;
+	margin-left: 1.5px;
+}
+
+#workspaces button {
+	padding: 0 3px;
+	color: @color_fg_inactive;
+}
+#workspaces button.active {
+	background: @color_bg_active;
+	color: @color_fg;
+}
+#workspaces button.focused {
+	color: @color_bg_active;
+}
+#workspaces button:hover {
+	background: @color_hover;
+	color: @color_fg;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#custom-spacing {
+	margin: 0 8px;
+}
+
+#cpu, #memory {
+	padding-left: 8px;
+	padding-right: 12px;
+}
+
+#pulseaudio, #bluetooth,  #battery, #clock {
+	padding: 0 8px;
+	margin: 0 1px;
+}
+
+#battery.critical:not(.charging) {
+	color: @color_critical;
+}
+
+#bluetooth, #pulseaudio, #battery {
+	padding: 0 10px;
+	margin: 0 1px;
+}
+
+#network {
+	padding-left: 8px;
+	padding-right: 6px;
+	margin: 0 1px;
+}
+
+#custom-os_button:hover, #cpu:hover, #memory:hover, #network:hover,#bluetooth:hover, #battery:hover,  #pulseaudio:hover,#clock:hover {
+	background: @color_hover;
+	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
