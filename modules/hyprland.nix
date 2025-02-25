@@ -166,8 +166,8 @@
 			bind = ${modifier}, Return, exec, alacritty --working-directory $HOME
 			bind = ${modifier}, B, exec, $BROWSER
 			bind = ${modifier}, R, exec, pidof $MENU || $MENU
-			bind =         , Print, exec, ${scripts}/printscreen.bash
-			bind = SHIFT   , Print, exec, ${scripts}/printscreen.bash -f
+			bind =         , Print, exec, ${scripts}/printscreen.sh
+			bind = SHIFT   , Print, exec, ${scripts}/printscreen.sh -f
 
 			# WINDOW FOCUS
 			bind = ${modifier}, left, movefocus, l
@@ -234,7 +234,7 @@
 			# BRIGHTNESS
 			bindel = , XF86MonBrightnessUp, exec, brightnessctl s 10%+
 			bindel = , XF86MonBrightnessDown, exec, brightnessctl s 10%-
-			bind = ${modifier}, Space, exec, ${scripts}/kbd_backlight_toggle.bash # Toggle keyboard backlight
+			bind = ${modifier}, Space, exec, ${scripts}/kbd_backlight_toggle.sh # Toggle keyboard backlight
 
 			# CUSTOM DEVICE CONFIG
 			device {
