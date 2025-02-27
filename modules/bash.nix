@@ -22,6 +22,8 @@
 					nvim $res
 				fi
 			}
+
+			export PATH=$PATH:${../scripts}
 		'';
 
 		profileExtra = ''
