@@ -26,11 +26,11 @@
 			export PATH=$PATH:${../scripts}
 		'';
 
-		profileExtra = ''
-			if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
-				exec Hyprland
-			fi
-		'';
+		# profileExtra = ''
+		# 	if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
+		# 		exec Hyprland
+		# 	fi
+		# '';
 		
 		sessionVariables = {
 			EDITOR="nvim";

@@ -157,7 +157,7 @@
 			bind = ${modifier}, Backspace, killactive
 			bind = ${modifier}, V, togglefloating
 			bind = ${modifier}, F, fullscreen
-			bind = ${modifier} SHIFT, L, exit
+			bind = ${modifier} SHIFT, E, exit
 			bind = ${modifier} SHIFT, S, exec, systemctl poweroff
 			bind = ${modifier} SHIFT, R, exec, systemctl reboot
 

@@ -117,6 +117,22 @@
 	programs.firefox.enable = true;
 	programs.hyprland.enable = true;
 
+
+    services.xserver = {
+		enable = true;
+		autorun = false;
+
+		displayManager.startx.enable = true;
+
+		windowManager.awesome = {
+			enable = true;
+			luaModules = with pkgs.luaPackages; [
+				luarocks
+				luadbi-mysql
+			];
+		};
+	};
+
 	hardware.graphics.enable = true;
 
     xdg.portal = {

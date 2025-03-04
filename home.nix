@@ -51,6 +51,10 @@
 		openvpn
 		libreoffice
 		libqalculate
+
+		pipes
+		cmatrix
+		cowsay
 	];
 
 	gtk.enable = true;
