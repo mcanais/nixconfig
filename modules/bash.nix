@@ -23,7 +23,7 @@
 				fi
 			}
 
-			export PATH=$PATH:${../scripts}
+			export PATH=$PATH:${../scripts}:$HOME/scripts
 		'';
 
 		# profileExtra = ''
