@@ -68,9 +68,11 @@
 
 	# Enable CUPS to print documents.
 	services.printing.enable = true;
+	services.pcscd.enable = true;
 
 
 	security.rtkit.enable = true;
+
 
 
 	# Enable sound with pipewire.
@@ -110,8 +112,14 @@
 		isNormalUser = true;
 		description = "Miguel Canais";
 		extraGroups = [ "networkmanager" "wheel" "docker" ];
-		packages = with pkgs; [ ];
 	};
+
+	security.sudo.extraRules = [
+		{ 
+			users = [ "mcanais" ];
+			commands = [ { command = "ALL"; options = [ "NOPASSWD" ]; } ]; 
+		}
+	];
 
 	# Install firefox.
 	programs.firefox.enable = true;

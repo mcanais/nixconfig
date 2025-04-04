@@ -4,18 +4,19 @@
 	home.username = "mcanais";
 	home.homeDirectory = "/home/mcanais";
 
+	home.stateVersion = "24.05";
+	
+	nixpkgs.config.allowUnfree = true;
+
+
 	imports = [
 		./modules/bash.nix
 		./modules/git.nix
 		./modules/alacritty.nix
 		./modules/hyprland.nix
         ./modules/zen.nix
+        ./modules/spicetify.nix
 	];
-
-	home.stateVersion = "24.05";
-	
-
-	nixpkgs.config.allowUnfree = true;
 	
 
 	home.packages = with pkgs; [
@@ -28,11 +29,11 @@
 		neovim
 		helix
 		vscodium
-		yazi
 
 		python312
 		rustup
 		ghc
+		cmake
 
 		brightnessctl
 
@@ -43,8 +44,9 @@
 		bluez
 		lazygit
 		neofetch
+		yazi
+		fd
 
-		spotify
 		kdePackages.okular
 		feh
 		obsidian

@@ -7,7 +7,7 @@
 		settings = {
 			window = {
 				padding = { x = 0; y = 0; };
-				opacity = 0.75;
+				opacity = 0.7;
 			};
 
 			font = {
