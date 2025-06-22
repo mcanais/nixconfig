@@ -24,18 +24,21 @@
 	let
 		system = "x86_64-linux";
 		pkgs = nixpkgs.legacyPackages.${system};
+
+        newSystem = systemModulesPath: nixpkgs.lib.nixosSystem {
+            inherit system;
+
+            specialArgs = { inherit inputs; };
+
+            modules = [
+                systemModulesPath
+            ];
+        };
 	in
 	{
 		nixosConfigurations = {
-			thinkpad = nixpkgs.lib.nixosSystem {
-				inherit system;
-
-				specialArgs = { inherit inputs; };
-
-				modules = [
-					./hosts/thinkpad
-				];
-			};
+			thinkpad = newSystem ./hosts/thinkpad;
+            satellite = newSystem ./hosts/satellite;
 		};
 
 		homeConfigurations = {

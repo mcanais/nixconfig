@@ -85,7 +85,6 @@
 			};
 
 			"battery"= {
-				bat = "BAT0";
 				states = {
 					"critical" = 15;
 				};
