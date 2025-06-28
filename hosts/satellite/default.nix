@@ -167,6 +167,7 @@
 		man-pages
 		docker
 		docker-compose
+		usbutils
 	];
 
 

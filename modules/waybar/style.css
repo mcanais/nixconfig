@@ -76,7 +76,7 @@ tooltip {
 	padding-right: 12px;
 }
 
-#pulseaudio, #bluetooth,  #battery, #clock {
+#pulseaudio, #bluetooth, #battery, #clock {
 	padding: 0 8px;
 	margin: 0 1px;
 }
@@ -96,7 +96,7 @@ tooltip {
 	margin: 0 1px;
 }
 
-#custom-os_button:hover, #cpu:hover, #memory:hover, #network:hover,#bluetooth:hover, #battery:hover,  #pulseaudio:hover,#clock:hover {
+#custom-os_button:hover, #cpu:hover, #memory:hover, #network:hover, #bluetooth:hover, #battery:hover,  #pulseaudio:hover,#clock:hover {
 	background: @color_hover;
 	transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
 }

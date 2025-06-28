@@ -10,8 +10,10 @@
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ ];
-  boot.extraModulePackages = [ ];
+  boot.kernelModules = [ "8852bu" ];
+  boot.extraModulePackages = with config.boot.kernelPackages; [ 
+    rtl8852bu
+  ];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/a5060b60-cc6a-456e-aea1-aff2f7f4be16";
